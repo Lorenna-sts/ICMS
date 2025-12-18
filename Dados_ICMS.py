@@ -41,11 +41,11 @@ mapeamento_categorias = {
 }
 
 # 2. Carregar arquivos
-df_icms = pd.read_csv(r'C:\Users\lorenna.santos\OneDrive - Subsecretaria de Tecnologia da Informação\Documentos\ICMS 2024.csv', 
+df_icms = pd.read_csv(r'CAMINHO DO ARQUIVO', 
                       sep=None, engine='python', encoding='latin1')
 df_icms.columns = [c.strip() for c in df_icms.columns]
 
-df_arrec = pd.read_csv(r'\\arquivosimb01\imb-geoprocessamento$\GEDE\BDE - Banco de Dados\2025\ipva_itcd_icms\Arrecadacao ICMS 2024_.csv', 
+df_arrec = pd.read_csv(r'CAMINHO DO ARQUIVO', 
                        sep=';', encoding='latin1')
 df_arrec.columns = [c.strip() for c in df_arrec.columns]
 
@@ -107,5 +107,6 @@ resultado[colunas_finais].sort_values(['LOC_NOME', 'var_cod']).to_csv(
     index=False, 
     encoding='latin1'
 )
+
 
 print(f"Sucesso! Valores formatados conforme a imagem em: {caminho_final}")
